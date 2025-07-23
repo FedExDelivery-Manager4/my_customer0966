@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FedEx Delivery - Ghana (+233)</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #6a0dad, #ffa500);
+      color: #333;
+    }
+
+    header {
+      background: url('094d59d143775be09293be64894cafb7.jpg') no-repeat center center/cover;
+      position: relative;
+      color: white;
+      height: 220px;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    header .header-content {
+      position: relative;
+      text-align: center;
+      top: 40%;
+      transform: translateY(-40%);
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+
+    header h1 span.fed {
+      color: #6a0dad;
+    }
+
+    header h1 span.ex {
+      color: #ffa500;
+    }
+
+    header h3 {
+      font-weight: normal;
+      margin-top: 8px;
+    }
+
+    header h6 {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      color: #fff;
+      z-index: 1;
+    }
+
+    .header-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .header-buttons button {
+      padding: 10px 20px;
+      background-color: white;
+      color: #4d148c;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    }
+
+    .section {
+      padding: 20px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .section h2 {
+      color: #6a0dad;
+    }
+
+    .field-group {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .field-group div {
+      flex: 1;
+      margin-right: 10px;
+    }
+
+    .field-group div:last-child {
+      margin-right: 0;
+    }
+
+    .readonly-box {
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 4px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    table thead {
+      background-color: #4d148c;
+      color: white;
+    }
+
+    table th, table td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    .total-box {
+      background-color: #ffa500;
+      color: white;
+      font-size: 1.4em;
+      text-align: center;
+      padding: 20px;
+      font-weight: bold;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: white;
+      padding: 15px;
+    }
+    
+    .momoNumber {
+      background: 4d148c;
+      text-align: center;
+      font-size: 12px;
+      color: white;
+      padding: 15px;
+    }
+  
+  .flightCode{
+    color: #CCC;
+    font-size: 8px
+    text-align: center;
+  }
+
+    #transactionList, #termsSection {
+      display: none;
+      margin: 30px auto;
+      max-width: 800px;
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    #transactionList h3,
+    #termsSection h3 {
+      color: #4d148c;
+    }
+
+    .transaction-entry {
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <h1><span class="fed">Fed</span><span class="ex">Ex</span> Delivery</h1>
+      <h3>Ghana (+233)</h3>
+    </div>
+    <h6>Home → International Delivery → Customer Page</h6>
+  </header>
+
+  <div class="header-buttons">
+    <button onclick="toggleSection('transactionList')"><i class="fas fa-receipt"></i> Transactions</button>
+    <button onclick="toggleSection('termsSection')"><i class="fas fa-question-circle"></i> Terms & Help</button>
+    <button onclick="toggleSection('trackItems')"><i class="fas fa-bus"></i> Track Item </button>
+      
+  </div>
+
+  <div id="transactionList">
+    <h3>Recent Transactions</h3>
+    <div class="transaction-entry">
+      <strong>ID:</strong> GTGN662 <br>
+      <strong>Date:</strong> 2025-07-22 <br>
+      <strong>Amount:</strong> GHS 400.00 | $ 38.83 <br>
+      <strong>Status:</strong> Delivered
+      <br>
+      <p> Code Generated</p>
+      <strong class="flightCode">SG-A-2025-044973</strong>
+    </div>
+    <!--
+    <div class="transaction-entry">
+      <strong>ID:</strong> ATGN012 <br>
+     Sender:  <strong> CINDY BERGS <br>
+     Date:  <strong> 2025-07-03 </strong> <br>
+      <strong>Amount:</strong> $ 120.00 | GH¢ 1240.00 <br>
+      <strong>Status:</strong> Delivery 
+    </div>
+
+    <div class="transaction-entry">
+      <strong>ID:</strong> ATGN075 <br>
+     Sender:  <strong> GENEVIEVE BERGS <br>
+     Date:  <strong> 2025-07-03 </strong> <br>
+      <strong>Amount:</strong> $ 80.00 | GH¢ 827.71 <br>
+      <strong>Status:</strong> Delivery 
+    </div>
+
+    <div class="transaction-entry">
+      <strong>ID:</strong> GTGN682 <br>
+      <strong>Date:</strong> 2025-07-04 <br>
+      <strong>Amount:</strong> GHS 1043.00 | $ 100.81 <br>
+      <strong>Status:</strong> Delivered
+      <br>
+      
+    </div>
+      -->
+  </div>
+
+  <div id="termsSection">
+    <h3>Terms, Conditions & Help</h3>
+    
+    <h1>📘 FedEx Delivery Service: International Customer Help Guide</h1>
+  <p><em>Shipping the World to Your Doorstep – Safely, Quickly, Transparently</em></p>
+
+  <h2>1. Introduction</h2>
+  <p>Welcome to <strong>FedEx Delivery Service</strong>, your trusted partner for international and domestic deliveries. Whether you're sending personal items, commercial goods, or time-sensitive packages, we are here to make the process seamless and secure.</p>
+  <p>This Help Guide provides clear rules, procedures, and support information for customers shipping from the U.S. (e.g., Atlanta) to Ghana and other destinations.</p>
+
+  <h2>2. Categories of Shipments</h2>
+  <p>Shipments are grouped to determine customs duty, processing time, and inspection needs. Use this guide to correctly classify your item:</p>
+  <ul>
+    <li><strong>Personal Items:</strong> Gifts, clothing, personal electronics. Declare as <em>"Personal Use"</em>.</li>
+    <li><strong>Business/Commercial:</strong> Products for resale, bulk items. Declare as <em>"Commercial"</em>.</li>
+    <li><strong>Electronics:</strong> Phones, laptops, appliances. Declare as <em>"Electronic Equipment"</em>.</li>
+    <li><strong>Food & Pharmaceuticals:</strong> Packaged food, supplements, medications. Declare as <em>"Consumables"</em>.</li>
+    <li><strong>Auto Parts/Vehicles:</strong> Engines, tyres, spare parts. Declare as <em>"Automobile Equipment"</em>.</li>
+  </ul>
+  <p><strong>✅ Tip:</strong> Declare truthfully. Misclassification may cause delays or penalties.</p>
+
+  <h2>3. Tax & Customs Duty Guidelines (Ghana Entry)</h2>
+  <p>Duties and VAT are applied based on declared value and category. These are standard government-imposed fees (not by FedEx Delivery Service).</p>
+  <ul>
+    <li><strong>Clothing & Personal Use:</strong> 10-20% customs duty. VAT applies.</li>
+    <li><strong>Laptops & Phones:</strong> 5-20% customs duty. VAT applies.</li>
+    <li><strong>Vehicles (used):</strong> 5-20% + age-based tax. VAT applies.</li>
+    <li><strong>Pharmaceuticals:</strong> Often exempt from duties; VAT may apply depending on FDA clearance.</li>
+    <li><strong>Gifts under $50:</strong> May be exempt from duties and VAT in some cases.</li>
+  </ul>
+  <p><strong>📌 Note:</strong> You will be notified of exact amounts <em>before delivery is completed</em>.</p>
+
+  <h2>4. Prohibited & Restricted Items</h2>
+  <p>We strictly follow Ghana and U.S. regulations. These items <u>cannot be shipped</u> under any circumstances:</p>
+
+  <p><strong>❌ Prohibited Items:</strong></p>
+  <ul>
+    <li>Firearms & ammunition</li>
+    <li>Narcotics, illegal drugs</li>
+    <li>Counterfeit goods</li>
+    <li>Wildlife or endangered species</li>
+    <li>Pornographic materials</li>
+  </ul>
+
+  <p><strong>⚠️ Restricted Items (Require Permits):</strong></p>
+  <ul>
+    <li>Medications (require FDA clearance)</li>
+    <li>Agricultural seeds/plants</li>
+    <li>High-capacity batteries</li>
+    <li>Precious metals & high-value jewelry</li>
+  </ul>
+
+  <h2>5. Inspection Rules & Scanning</h2>
+  <p><strong>All shipments are subject to inspection.</strong> The following may trigger a customs or security check:</p>
+  <ul>
+    <li>Unclear declaration or undervalued items</li>
+    <li>Suspicious labeling (e.g., “gift” but heavy electronics)</li>
+    <li>Shipments over 20kg</li>
+    <li>Random checks by customs</li>
+  </ul>
+  <p><strong>📦 Note:</strong> Inspection may delay your item by <em>1–3 working days</em>. We will update you promptly.</p>
+
+  <h2>6. Customer Conduct & Fraud Policy</h2>
+  <p>We protect all our clients from fraud and criminal use. Offenders will be prosecuted in cooperation with Ghanaian and international authorities.</p>
+
+  <p><strong>🔒 Forbidden Acts by Senders or Receivers:</strong></p>
+  <ul>
+    <li>Providing fake ID or addresses</li>
+    <li>Using stolen cards to pay for shipping</li>
+    <li>Fraudulent claims or chargebacks</li>
+    <li>Importing contraband or undeclared goods</li>
+    <li>Shipping on behalf of scammers (“romance scam”, “package scam”)</li>
+  </ul>
+  <p><strong>👉 Note:</strong> If a suspicious package is linked to you, your name may be <u>blacklisted</u> and reported to law enforcement.</p>
+
+  <h2>7. Shipping Procedure (Step-by-Step)</h2>
+  <ol>
+    <li>Package your item securely</li>
+    <li>Declare contents honestly at the shipment office or online</li>
+    <li>Attach valid ID copy for both sender and receiver</li>
+    <li>Pay for shipping (online or in-person)</li>
+    <li>Receive tracking number and estimated delivery date</li>
+    <li>Track your package via: https://fedexdelivery-manager4.github.io/FedEx_MyCustomer_Page/track/. (After Clearing Items) </li>
+    <li>Receive customs notice (if applicable)</li>
+    <li>Pay duty & receive item in Ghana (Accra office or home delivery)</li>
+  </ol>
+
+  <p><strong>📬 Estimated Delivery Times: </strong></p>
+  <ul>
+    <li><strong>Flight Express:</strong> 1-2 business days (GH¢ 399.00) </li>
+    <li><strong>Shipping Express:</strong> 3-5 business days (GH¢ 299.00)</li>
+    <li><strong>Sea Freight (bulk):</strong> 4–8 weeks (varies) </li>
+  </ul>
+
+  <h2>8. Best Practices for Smooth Delivery</h2>
+  <ul>
+    <li>Always use full legal names and accurate phone numbers</li>
+    <li>Avoid abbreviating addresses (e.g., write “Tema Community 18” instead of “Tema Comm 18”)</li>
+    <li>Don’t ship high-value electronics without insurance</li>
+    <li>Don’t agree to receive parcels for strangers</li>
+    <li>Pay customs duties via official channels to avoid fraud</li>
+  </ul>
+
+  <h2>9. Frequently Asked Questions (FAQ)</h2>
+  <p><strong>Q: What happens if my item is lost or damaged?</strong><br>
+  A: We provide up to $100 free insurance. Additional insurance is optional.</p>
+
+  <p><strong>Q: Can I return a shipment from Ghana to the U.S.?</strong><br>
+  A: Yes, reverse logistics are supported if documentation requirements are met.</p>
+
+  <p><strong>Q: I feel the payment amount for gift is so dynamic, why?</strong><br>
+  A: The minimum amount should be $50, however, based on the economic value of the item it may increase.</p>
+  
+  <p><strong>Q: Can I pay the clearance fee after i recieve the items?</strong><br>
+  A: No, Clearance bill is to be payed fully before items leave the office custody, even if cash is your package.</p>
+  
+  <p><strong>Q: Can I switch the mode from pick up to delivery when the items arrive?</strong><br>
+  A: No, the modes can not be changed. It is to the discretion of the sender.</p>
+  
+   <p><strong>Q: Can someone else pick up my package?</strong><br>
+  A: Yes, with valid ID and a signed authorization form.</p>
+  
+    <br>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <h2>Sender Details</h2>
+      <div class="field-group">
+        <div>
+          <label>Full Name</label>
+          <div class="readonly-box">CINDY BERGS</div>
+        </div>
+        <div>
+          <label>Phone Number</label>
+          <div class="readonly-box">+1(540) 304-1162</div>
+        </div>
+      </div>
+      <div class="field-group">
+        <div>
+          <label>Location</label>
+          <div class="readonly-box">Atlanta, Georgia</div>
+        </div>
+        <div>
+          <label>Email</label>
+          <div class="readonly-box">parkerbergs0@gmail.com</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Recipient Details</h2>
+      <div class="field-group">
+        <div>
+          <label>Full Name</label>
+          <div class="readonly-box">ERIC AKULGA</div>
+        </div>
+        <div>
+          <label>Phone Number</label>
+          <div class="readonly-box">+233 59 8840 628</div>
+        </div>
+      </div>
+      <div class="field-group">
+        <div>
+          <label>Location</label>
+          <div class="readonly-box">SUNYANI, GHANA</div>
+        </div>
+        <div>
+          <label>Modes</label>
+          <div class="readonly-box">Flight | Delivery</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Package Summary</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>No:</th>
+            <th>Quantity</th>
+            <th>Description</th>
+            <th>Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>iPhone 12 Pro Max</td>
+            <td>Electronics</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>2</td>
+            <td>iPhone 15 Pro Max</td>
+            <td>Electronics</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>1</td>
+            <td>Rolex Wrist Watch</td>
+            <td>Gift</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>2</td>
+            <td>MacBook Pro</td>
+            <td>Electronics</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="total-box">
+      Clearance Bill: <br>
+      <h5 style="color: #ccc; font-size: 10px">Please Wait... </br> Bill woould be update upon arrival of items. </h5>
+    </div>
+  </div>
+  <div class="momoNumber">
+    Branch Manager 4 <br> 
+CECIL JONES ABAIDOO: <strong> +233 595 582 318 </strong>
+  </p>
+
+  <div class="footer">
+    &copy; 2025 FedEx Ghana. All Rights Reserved.
+  </div>
+
+  <script>
+    function toggleSection(id) {
+      const txn = document.getElementById("transactionList");
+      const terms = document.getElementById("termsSection");
+      txn.style.display = "none";
+      terms.style.display = "none";
+      document.getElementById(id).style.display = "block";
+      window.scrollTo({ top: document.getElementById(id).offsetTop - 20, behavior: 'smooth' });
+    }
+  
+  window.addEventListener('scroll', () => {
+  ['transactionList', 'termsSection'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el.style.display === 'block') {
+      const rect = el.getBoundingClientRect();
+      if (rect.bottom < 0 || rect.top > window.innerHeight) {
+        el.style.display = 'none';
+      }
+    }
+  });
+});
+  </script>
+</body>
+</html>
